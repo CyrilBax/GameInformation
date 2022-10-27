@@ -1,0 +1,23 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    //Hilt
+    id "kotlin-kapt"
+    id 'com.google.dagger.hilt.android'
+    id 'kotlinx-serialization'
+}
+
+apply from: "$project.rootDir/gradle/default_build.gradle"
+apply from: "$project.rootDir/gradle/dependencies_hilt.gradle"
+
+android {
+    namespace 'com.example.gameinformation'
+
+    defaultConfig {
+        applicationId "com.example.gameinformation"
+    }
+}
+
+dependencies {
+    implementation project(':game_list:game_list_feature')
+}
