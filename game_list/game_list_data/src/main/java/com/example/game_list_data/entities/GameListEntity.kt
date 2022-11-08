@@ -1,6 +1,6 @@
 package com.example.game_list_data.entities
 
-import kotlinx.serialization.SerialName
+import com.google.gson.annotations.SerializedName
 import kotlinx.serialization.Serializable
 
 data class GameListEntity(
@@ -12,10 +12,10 @@ data class GameListEntity(
 data class GameLight(
     val id: Int?,
     val name: String?,
-    @SerialName("background_image")
+    @SerializedName("background_image")
     val backgroundImage: String?,
     val rating: Double?,
-    @SerialName("parent_platforms")
+    @SerializedName("parent_platforms")
     val parentPlatforms: List<ParentPlatform>?,
     val genres: List<Genre>?
 )

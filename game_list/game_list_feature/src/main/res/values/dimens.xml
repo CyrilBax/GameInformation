@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Margin -->
+    <dimen name="margin_small">8dp</dimen>
+    <dimen name="margin_medium">16dp</dimen>
+
+    <!-- radius -->
+    <dimen name="radius_medium">4dp</dimen>
+
+    <!-- Elevation -->
+    <dimen name="elevation_medium">10dp</dimen>
+</resources>
