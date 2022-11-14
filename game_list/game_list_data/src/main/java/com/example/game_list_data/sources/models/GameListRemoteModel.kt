@@ -1,9 +1,9 @@
-package com.example.game_list_data.entities
+package com.example.game_list_data.sources.models
 
 import com.google.gson.annotations.SerializedName
 import kotlinx.serialization.Serializable
 
-data class GameListEntity(
+data class GameListRemoteModel(
     val next: String?,
     val previous: String?,
     val results: List<GameLight>

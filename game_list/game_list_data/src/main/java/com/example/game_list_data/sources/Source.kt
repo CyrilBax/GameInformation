@@ -1,9 +1,8 @@
 package com.example.game_list_data.sources
 
-import com.example.game_list_data.entities.GameListEntity
+import com.example.game_list_data.sources.models.GameListRemoteModel
 import retrofit2.http.GET
 import retrofit2.http.Header
-import retrofit2.http.Path
 import retrofit2.http.Query
 
 interface Source {
@@ -14,7 +13,7 @@ interface Source {
         @Query("page_size") pageSize: Int,
         @Query("key") key: String,
         @Header("Content-Type") contentType: String? = "application/json"
-    ): GameListEntity
+    ): GameListRemoteModel
 
     companion object {
         private const val PATH_GET_GAME_LIST = "games"
