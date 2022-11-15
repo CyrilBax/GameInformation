@@ -9,12 +9,13 @@ plugins {
 apply from: "$project.rootDir/gradle/default_build.gradle"
 apply from: "$project.rootDir/gradle/dependencies_hilt.gradle"
 apply from: "$project.rootDir/gradle/dependencies_coroutines.gradle"
+apply from: "$project.rootDir/gradle/dependencies_unit_test.gradle"
 
 android {
     namespace 'com.example.game_list_domain'
 }
 
 dependencies {
-    implementation project (':game_list:game_list_data')
-    implementation project (':commons')
+    implementation project(':game_list:game_list_data')
+    implementation project(':commons')
 }
