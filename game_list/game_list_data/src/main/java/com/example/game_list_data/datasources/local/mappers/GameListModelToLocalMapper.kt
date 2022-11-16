@@ -40,7 +40,7 @@ class GameListModelToLocalMapper @Inject constructor() : Mapper<GameListModel, G
             name = from.name,
             picture = from.picture,
             rating = from.rating,
-            plaforms = from.platforms?.map { mapPlatforms(it) },
+            platforms = from.platforms?.map { mapPlatforms(it) },
             genres = from.genre?.map { mapGenre(it) }
         )
     }

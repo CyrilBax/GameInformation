@@ -17,7 +17,7 @@ data class GameLightEntity(
     val name: String?,
     val picture: String?,
     val rating: Double?,
-    val plaforms: List<PlatformEntity>?,
+    val platforms: List<PlatformEntity>?,
     val genres: List<GenreEntity>?
 )
 
