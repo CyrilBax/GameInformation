@@ -1,5 +1,6 @@
 package com.example.game_list_feature.ui.main
 
+
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -19,8 +20,11 @@ class MainViewModel @Inject constructor(
 
     val gameList: LiveData<List<GameLightUi>>
         get() = _gameList
+    val error: LiveData<Unit>
+        get() = _error
 
     private val _gameList: MutableLiveData<List<GameLightUi>> = MutableLiveData()
+    private val _error: MutableLiveData<Unit> = MutableLiveData()
     private var _page: Int = 1
 
     fun getGameList() {
@@ -31,6 +35,7 @@ class MainViewModel @Inject constructor(
                 _gameList.postValue(result.gameLights)
             } catch (e: Exception) {
                 Timber.e(e)
+                _error.postValue(Unit)
             }
         }
 

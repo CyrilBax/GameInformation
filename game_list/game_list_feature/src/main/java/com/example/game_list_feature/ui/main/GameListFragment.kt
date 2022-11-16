@@ -4,10 +4,12 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.game_list_feature.R
 import com.example.game_list_feature.databinding.GameListFragmentBinding
 import com.example.game_list_feature.ui.main.adapter.GameAdapter
 import dagger.hilt.android.AndroidEntryPoint
@@ -61,8 +63,20 @@ class GameListFragment : Fragment() {
                 stopShimmer()
                 visibility = View.GONE
             }
-            gameAdapter.setGameList(it)
+            if (it.isEmpty()) {
+                showToast(getString(R.string.game_list_empty))
+            } else {
+                gameAdapter.setGameList(it)
+            }
         }
+
+        viewModel.error.observe(viewLifecycleOwner) {
+            showToast(getString(R.string.game_list_error))
+        }
+    }
+
+    private fun showToast(message: String) {
+        Toast.makeText(activity?.applicationContext, message, Toast.LENGTH_LONG).show()
     }
 
     companion object {

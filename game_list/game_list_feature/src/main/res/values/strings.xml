@@ -3,4 +3,8 @@
 
     <!-- Game Card -->
     <string name="game_picture_description">Picture of the game</string>
+
+    <!-- Errors messages -->
+    <string name="game_list_empty">No result found</string>
+    <string name="game_list_error">Error during retrieve game list</string>
 </resources>
