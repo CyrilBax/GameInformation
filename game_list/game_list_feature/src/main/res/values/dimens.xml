@@ -3,10 +3,17 @@
     <!-- Margin -->
     <dimen name="margin_small">8dp</dimen>
     <dimen name="margin_medium">16dp</dimen>
+    <dimen name="margin_large">32dp</dimen>
+    <dimen name="margin_extra_large">50dp</dimen>
 
     <!-- radius -->
     <dimen name="radius_medium">4dp</dimen>
 
     <!-- Elevation -->
     <dimen name="elevation_medium">10dp</dimen>
+
+    <!-- Shimmer -->
+    <dimen name="shimmer_image_size">150dp</dimen>
+    <dimen name="shimmer_text_width">150dp</dimen>
+    <dimen name="shimmer_text_height">16dp</dimen>
 </resources>

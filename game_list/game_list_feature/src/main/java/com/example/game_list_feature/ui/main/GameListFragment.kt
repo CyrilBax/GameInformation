@@ -35,6 +35,8 @@ class GameListFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        binding.shimmerView.gameListShimmer.startShimmer()
+
         gameAdapter = GameAdapter()
 
         binding.gameRecyclerView.apply {
@@ -55,6 +57,10 @@ class GameListFragment : Fragment() {
         }
 
         viewModel.gameList.observe(viewLifecycleOwner) {
+            binding.shimmerView.gameListShimmer.apply {
+                stopShimmer()
+                visibility = View.GONE
+            }
             gameAdapter.setGameList(it)
         }
     }

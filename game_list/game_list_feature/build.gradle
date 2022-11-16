@@ -9,6 +9,7 @@ plugins {
 apply from: "$project.rootDir/gradle/default_build.gradle"
 apply from: "$project.rootDir/gradle/dependencies_hilt.gradle"
 apply from: "$project.rootDir/gradle/dependencies_picasso.gradle"
+apply from: "$project.rootDir/gradle/dependencies_shimmer.gradle"
 
 android {
     namespace 'com.example.game_list_feature'
