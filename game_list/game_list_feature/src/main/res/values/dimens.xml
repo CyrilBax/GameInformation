@@ -16,4 +16,7 @@
     <dimen name="shimmer_image_size">150dp</dimen>
     <dimen name="shimmer_text_width">150dp</dimen>
     <dimen name="shimmer_text_height">16dp</dimen>
+
+    <!-- Platforms -->
+    <dimen name="platform_size">14dp</dimen>
 </resources>

@@ -1,7 +1,6 @@
 package com.example.game_list_data.datasources.local
 
 import com.example.commons.Mapper
-import com.example.game_list_data.cache.GameListDAO
 import com.example.game_list_data.cache.GameListDataBase
 import com.example.game_list_data.cache.models.GameListEntity
 import com.example.game_list_data.datasources.local.implementations.GameListLocalDataSourceImpl

@@ -30,7 +30,8 @@ class GameAdapter @Inject constructor() : RecyclerView.Adapter<GameViewHolder>()
     override fun onBindViewHolder(holder: GameViewHolder, position: Int) {
         holder.bind(
             gameList[position].picture ?: "empty",
-            gameList[position].name ?: ""
+            gameList[position].name ?: "",
+            gameList[position].platforms
         )
     }
 

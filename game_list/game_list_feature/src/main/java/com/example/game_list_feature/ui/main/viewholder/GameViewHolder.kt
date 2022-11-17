@@ -2,6 +2,7 @@ package com.example.game_list_feature.ui.main.viewholder
 
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
+import com.example.game_list_domain.models.PlatformUi
 import com.example.game_list_feature.databinding.GameItemBinding
 import com.squareup.picasso.Callback
 import com.squareup.picasso.Picasso
@@ -13,9 +14,12 @@ class GameViewHolder @Inject constructor(
 
     fun bind(
         picture: String,
-        title: String
+        title: String,
+        platforms: List<PlatformUi>?
     ) {
+        platforms?.let { showPlatforms(it) }
         binding.apply {
+            hideErrorPictureIfNecessary()
             gamePictureLoading.show()
             gameTitle.text = title
             Picasso.get()
@@ -23,6 +27,7 @@ class GameViewHolder @Inject constructor(
                 .into(gamePicture, object : Callback {
                     override fun onSuccess() {
                         hideLoading()
+                        hideErrorPictureIfNecessary()
                         gamePicture.visibility = View.VISIBLE
                     }
 
@@ -36,10 +41,20 @@ class GameViewHolder @Inject constructor(
         }
     }
 
-    fun hideLoading() {
+    private fun hideLoading() {
         binding.gamePictureLoading.apply {
             hide()
             visibility = View.GONE
         }
+    }
+
+    private fun hideErrorPictureIfNecessary() {
+        if (binding.pictureError.visibility == View.VISIBLE) {
+            binding.pictureError.visibility = View.GONE
+        }
+    }
+
+    private fun showPlatforms(platforms: List<PlatformUi>) {
+        binding.gameListPlatformsView.initPlatformsView(platforms)
     }
 }
