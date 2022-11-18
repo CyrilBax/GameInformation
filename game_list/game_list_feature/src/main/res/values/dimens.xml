@@ -6,6 +6,9 @@
     <dimen name="margin_large">32dp</dimen>
     <dimen name="margin_extra_large">50dp</dimen>
 
+    <!-- Padding -->
+    <dimen name="padding_small">8dp</dimen>
+
     <!-- radius -->
     <dimen name="radius_medium">4dp</dimen>
 

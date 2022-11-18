@@ -1,4 +1,4 @@
-package com.example.game_page_domain
+package com.example.game_page_feature
 
 import android.os.Bundle
 import android.view.LayoutInflater

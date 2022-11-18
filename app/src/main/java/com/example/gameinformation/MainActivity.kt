@@ -4,7 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.business.contracts.NavigationContract
 import com.example.game_list_feature.ui.main.GameListFragment
-import com.example.game_page_domain.GamePageFragment
+import com.example.game_page_feature.GamePageFragment
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

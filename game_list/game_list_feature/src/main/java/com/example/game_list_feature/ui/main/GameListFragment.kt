@@ -11,6 +11,7 @@ import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.business.contracts.NavigationContract
+import com.example.game_list_domain.models.GameLightUi
 import com.example.game_list_feature.R
 import com.example.game_list_feature.databinding.GameListFragmentBinding
 import com.example.game_list_feature.ui.main.adapter.GameAdapter
@@ -22,6 +23,7 @@ class GameListFragment : Fragment() {
     private lateinit var binding: GameListFragmentBinding
     private val viewModel: MainViewModel by viewModels()
     private lateinit var gameAdapter: GameAdapter
+    private val gameList: MutableList<GameLightUi> = mutableListOf()
 
     var navigationContract: NavigationContract? = null
 
@@ -78,7 +80,8 @@ class GameListFragment : Fragment() {
             if (it.isEmpty()) {
                 showToast(getString(R.string.game_list_empty))
             } else {
-                gameAdapter.setGameList(it)
+                gameList.addAll(it)
+                gameAdapter.setGameList(gameList.toList())
             }
         }
 

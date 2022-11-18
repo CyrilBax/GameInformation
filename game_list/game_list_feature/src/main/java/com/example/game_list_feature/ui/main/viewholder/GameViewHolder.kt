@@ -26,6 +26,9 @@ class GameViewHolder @Inject constructor(
             gameTitle.text = title
             Picasso.get()
                 .load(picture)
+                .resize(200, 0) // Use 0 to preserve picture ratio
+                .onlyScaleDown()
+                .centerInside()
                 .into(gamePicture, object : Callback {
                     override fun onSuccess() {
                         hideLoading()
