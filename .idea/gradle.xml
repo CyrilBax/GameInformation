@@ -16,6 +16,10 @@
             <option value="$PROJECT_DIR$/game_list/game_list_data" />
             <option value="$PROJECT_DIR$/game_list/game_list_domain" />
             <option value="$PROJECT_DIR$/game_list/game_list_feature" />
+            <option value="$PROJECT_DIR$/game_page" />
+            <option value="$PROJECT_DIR$/game_page/game_page_data" />
+            <option value="$PROJECT_DIR$/game_page/game_page_domain" />
+            <option value="$PROJECT_DIR$/game_page/game_page_feature" />
           </set>
         </option>
       </GradleProjectSettings>
