@@ -12,9 +12,20 @@ apply from: "$project.rootDir/gradle/dependencies_hilt.gradle"
 
 android {
     namespace 'com.example.gameinformation'
+    externalNativeBuild {
+        cmake {
+            path file('../business/src/main/java/com/example/business/cpp/CMakeLists.txt')
+            version '3.22.1'
+        }
+    }
 
     defaultConfig {
         applicationId "com.example.gameinformation"
+        externalNativeBuild {
+            cmake {
+                cppFlags ''
+            }
+        }
     }
 }
 

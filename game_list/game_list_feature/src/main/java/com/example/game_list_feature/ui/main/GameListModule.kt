@@ -1,6 +1,6 @@
 package com.example.game_list_feature.ui.main
 
-import com.example.business.communication.NavigationContract
+import com.example.business.contracts.NavigationContract
 import dagger.Module
 import dagger.Provides
 

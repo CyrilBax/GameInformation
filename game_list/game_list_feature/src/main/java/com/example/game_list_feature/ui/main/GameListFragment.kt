@@ -10,7 +10,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.business.communication.NavigationContract
+import com.example.business.contracts.NavigationContract
 import com.example.game_list_feature.R
 import com.example.game_list_feature.databinding.GameListFragmentBinding
 import com.example.game_list_feature.ui.main.adapter.GameAdapter

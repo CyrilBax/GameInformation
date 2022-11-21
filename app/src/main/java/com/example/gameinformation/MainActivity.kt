@@ -2,7 +2,7 @@ package com.example.gameinformation
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.business.communication.NavigationContract
+import com.example.business.contracts.NavigationContract
 import com.example.game_list_feature.ui.main.GameListFragment
 import com.example.game_page_domain.GamePageFragment
 import dagger.hilt.android.AndroidEntryPoint
@@ -24,5 +24,11 @@ class MainActivity : AppCompatActivity(), NavigationContract {
             addToBackStack(null)
             replace(R.id.main_activity, GamePageFragment.newInstance(gameId))
         }.commit()
+    }
+
+    companion object {
+        init {
+            System.loadLibrary("native-lib")
+        }
     }
 }
