@@ -1,5 +1,6 @@
 package com.example.game_list_feature.ui.main
 
+import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -9,6 +10,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.business.communication.NavigationContract
 import com.example.game_list_feature.R
 import com.example.game_list_feature.databinding.GameListFragmentBinding
 import com.example.game_list_feature.ui.main.adapter.GameAdapter
@@ -20,6 +22,14 @@ class GameListFragment : Fragment() {
     private lateinit var binding: GameListFragmentBinding
     private val viewModel: MainViewModel by viewModels()
     private lateinit var gameAdapter: GameAdapter
+
+    var navigationContract: NavigationContract? = null
+
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+        if (context is NavigationContract)
+            navigationContract = context
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,7 +49,9 @@ class GameListFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         binding.shimmerView.gameListShimmer.startShimmer()
 
-        gameAdapter = GameAdapter()
+        gameAdapter = GameAdapter {
+            navigationContract?.navigateToGamePage(it)
+        }
 
         binding.gameRecyclerView.apply {
             adapter = gameAdapter

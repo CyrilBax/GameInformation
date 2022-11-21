@@ -9,7 +9,9 @@ import com.example.game_list_feature.databinding.GameItemBinding
 import com.example.game_list_feature.ui.main.viewholder.GameViewHolder
 import javax.inject.Inject
 
-class GameAdapter @Inject constructor() : RecyclerView.Adapter<GameViewHolder>() {
+class GameAdapter @Inject constructor(
+    private val onGameClicked: (String) -> Unit
+) : RecyclerView.Adapter<GameViewHolder>() {
 
     private var gameList: MutableList<GameLightUi> = mutableListOf()
 
@@ -32,7 +34,9 @@ class GameAdapter @Inject constructor() : RecyclerView.Adapter<GameViewHolder>()
             gameList[position].picture ?: "empty",
             gameList[position].name ?: "",
             gameList[position].platforms
-        )
+        ) {
+            onGameClicked.invoke(gameList[position].id.toString())
+        }
     }
 
     override fun getItemCount(): Int = gameList.size

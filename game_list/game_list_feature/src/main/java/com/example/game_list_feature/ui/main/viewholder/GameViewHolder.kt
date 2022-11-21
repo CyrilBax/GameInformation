@@ -15,10 +15,12 @@ class GameViewHolder @Inject constructor(
     fun bind(
         picture: String,
         title: String,
-        platforms: List<PlatformUi>?
+        platforms: List<PlatformUi>?,
+        onGameClicked: (Unit) -> Unit
     ) {
         platforms?.let { showPlatforms(it) }
         binding.apply {
+            gameCard.setOnClickListener { onGameClicked.invoke(Unit) }
             hideErrorPictureIfNecessary()
             gamePictureLoading.show()
             gameTitle.text = title
