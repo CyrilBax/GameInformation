@@ -1,5 +1,8 @@
 package com.example.game_list_data.sources.profiles
 
+import com.example.business.domain.profiles.GetRawgApiKeyUseCaseModule
+import com.example.business.domain.usecases.GetRawgApiKeyUseCase
+import com.example.business.internal.GameInterceptor
 import com.example.game_list_data.sources.GameListSource
 import com.example.game_list_data.sources.Source
 import com.example.game_list_data.sources.implementations.GameListSourceImpl
@@ -11,7 +14,7 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import javax.inject.Named
 
-@Module(includes = [GameListSourceModule.ServiceModule::class])
+@Module(includes = [GameListSourceModule.ServiceModule::class, GetRawgApiKeyUseCaseModule::class])
 abstract class GameListSourceModule {
 
     @Binds
@@ -19,6 +22,12 @@ abstract class GameListSourceModule {
 
     @Module
     class ServiceModule {
+
+        @Provides
+        @Named(GAME_INTERCEPTOR)
+        fun provideGameInterceptor(
+            getRawgApiKeyUseCase: GetRawgApiKeyUseCase
+        ): GameInterceptor = GameInterceptor(getRawgApiKeyUseCase.execute())
 
         @Provides
         fun provideService(@Named(GAME_RETROFIT) retrofit: Retrofit): Source =
@@ -35,14 +44,18 @@ abstract class GameListSourceModule {
 
         @Provides
         @Named(GAME_OKHTTP)
-        fun provideOkhttp(): OkHttpClient = OkHttpClient()
+        fun provideOkhttp(
+            @Named(GAME_INTERCEPTOR) gameInterceptor: GameInterceptor
+        ): OkHttpClient = OkHttpClient()
             .newBuilder()
+            .addInterceptor(gameInterceptor)
             .build()
 
         companion object {
             private const val BASE_URL = "https://api.rawg.io/api/"
             private const val GAME_RETROFIT = "GAME_RETROFIT"
             private const val GAME_OKHTTP = "GAME_OKHTTP"
+            private const val GAME_INTERCEPTOR = "GAME_INTERCEPTOR"
         }
 
     }

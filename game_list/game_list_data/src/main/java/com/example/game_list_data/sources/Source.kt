@@ -10,9 +10,7 @@ interface Source {
     @GET(PATH_GET_GAME_LIST)
     suspend fun getGameList(
         @Query("page") page: Int,
-        @Query("page_size") pageSize: Int,
-        @Query("key") key: String,
-        @Header("Content-Type") contentType: String? = "application/json"
+        @Query("page_size") pageSize: Int
     ): GameListRemoteModel
 
     companion object {

@@ -11,8 +11,7 @@ class GameListSourceImpl @Inject constructor(
     override suspend fun getGameList(page: Int): GameListRemoteModel {
         return source.getGameList(
             page = page,
-            pageSize = 20,
-            key = "b93e15401f5e4b6ba8e982d50e192f75"
+            pageSize = 20
         )
     }
 }

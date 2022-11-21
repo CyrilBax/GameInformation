@@ -5,7 +5,7 @@ import com.example.business.domain.usecases.implementations.GetRawgApiKeyUseCase
 import dagger.Binds
 import dagger.Module
 
-@Module
+@Module(includes = [RawgApiKeyRepositoryModule::class])
 abstract class GetRawgApiKeyUseCaseModule {
 
     @Binds
