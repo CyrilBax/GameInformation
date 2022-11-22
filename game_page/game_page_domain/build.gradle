@@ -1,14 +1,21 @@
 plugins {
     id 'com.android.library'
-    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
     //Hilt
-    id "kotlin-kapt"
     id 'com.google.dagger.hilt.android'
 }
 
 apply from: "$project.rootDir/gradle/default_build.gradle"
 apply from: "$project.rootDir/gradle/dependencies_hilt.gradle"
+apply from: "$project.rootDir/gradle/dependencies_coroutines.gradle"
+apply from: "$project.rootDir/gradle/dependencies_unit_test.gradle"
 
 android {
     namespace 'com.example.game_page_domain'
+}
+
+dependencies {
+    implementation project(':game_page:game_page_data')
+    implementation project(':commons')
 }

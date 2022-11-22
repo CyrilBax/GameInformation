@@ -8,7 +8,16 @@ plugins {
 
 apply from: "$project.rootDir/gradle/default_build.gradle"
 apply from: "$project.rootDir/gradle/dependencies_hilt.gradle"
+apply from :"$project.rootDir/gradle/dependencies_okhttp.gradle"
+apply from :"$project.rootDir/gradle/dependencies_retrofit.gradle"
+apply from :"$project.rootDir/gradle/dependencies_room.gradle"
+apply from :"$project.rootDir/gradle/dependencies_unit_test.gradle"
 
 android {
     namespace 'com.example.game_page_data'
+}
+
+dependencies {
+    implementation project(':business')
+    implementation project(':commons')
 }
