@@ -17,12 +17,14 @@ class GamePageRepositoryImpl @Inject constructor(
     override suspend fun getGamePage(gameId: String): GamePageModelUi {
         var gamePageResult = localDataSource.getGamePage(gameId)
 
-        if (gamePageResult == null && remoteDataSource.isOnline()) {
-            gamePageResult = remoteDataSource.getGamePage(gameId)
+        if (gamePageResult == null) {
+            if (remoteDataSource.isOnline()) {
+                gamePageResult = remoteDataSource.getGamePage(gameId)
 
-            localDataSource.saveGamePage(gamePageResult)
-        } else {
-            throw Error("Not found") // todo better way
+                localDataSource.saveGamePage(gamePageResult)
+            } else {
+                throw Error("Not found")
+            }
         }
 
         return mapper.mapTo(gamePageResult)

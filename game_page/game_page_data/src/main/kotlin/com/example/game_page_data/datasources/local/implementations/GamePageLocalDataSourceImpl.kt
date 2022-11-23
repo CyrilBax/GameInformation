@@ -14,7 +14,7 @@ class GamePageLocalDataSourceImpl @Inject constructor(
     private val modelToEntityMapper: Mapper<GamePageModel, GamePageEntity>
 ) : GamePageLocalDataSource {
 
-    private val gamePageDao: GamePageDAO = dataBase.getFamePageDao()
+    private val gamePageDao: GamePageDAO = dataBase.getGamePageDao()
 
     override suspend fun getGamePage(gameId: String): GamePageModel? {
         val result = gamePageDao.getGamePage(gameId)

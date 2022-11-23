@@ -19,7 +19,6 @@ class GameListSourceImplTest {
 
     private val page: Int = 0
     private val pageSize: Int = 20
-    private val key: String = "b93e15401f5e4b6ba8e982d50e192f75"
 
     @Before
     fun setup() {
@@ -28,8 +27,7 @@ class GameListSourceImplTest {
             whenever(
                 source.getGameList(
                     page = page,
-                    pageSize = pageSize,
-                    key = key
+                    pageSize = pageSize
                 )
             ).thenReturn(mockedResult)
         }

@@ -4,7 +4,7 @@ data class GamePageModel(
     val id: String,
     val name: String?,
     val description: String?,
-    val rating: Long?,
+    val rating: Double?,
     val reditLink: String?,
     val reditDescription: String?,
     val platforms: List<PlatformModel>?,

@@ -14,6 +14,7 @@ android {
 }
 
 dependencies {
+    implementation project(':game_page:game_page_domain')
 
     // view model
     implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.5.1'

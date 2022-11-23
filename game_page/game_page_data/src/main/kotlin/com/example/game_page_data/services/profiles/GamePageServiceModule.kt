@@ -24,18 +24,18 @@ abstract class GamePageServiceModule {
     class ServiceModule {
 
         @Provides
-        @Named(GAME_INTERCEPTOR)
+        @Named(GAME_PAGE_INTERCEPTOR)
         fun provideGameInterceptor(
             getRawgApiKeyUseCase: GetRawgApiKeyUseCase
         ): GameInterceptor = GameInterceptor(getRawgApiKeyUseCase.execute())
 
         @Provides
-        fun provideService(@Named(GAME_RETROFIT) retrofit: Retrofit): Service =
+        fun provideService(@Named(GAME_PAGE_RETROFIT) retrofit: Retrofit): Service =
             retrofit.create(Service::class.java)
 
         @Provides
-        @Named(GAME_RETROFIT)
-        fun provideRetrofit(@Named(GAME_OKHTTP) okHttpClient: OkHttpClient): Retrofit =
+        @Named(GAME_PAGE_RETROFIT)
+        fun provideRetrofit(@Named(GAME_PAGE_OKHTTP) okHttpClient: OkHttpClient): Retrofit =
             Retrofit.Builder()
                 .baseUrl(BASE_URL)
                 .addConverterFactory(GsonConverterFactory.create())
@@ -43,9 +43,9 @@ abstract class GamePageServiceModule {
                 .build()
 
         @Provides
-        @Named(GAME_OKHTTP)
+        @Named(GAME_PAGE_OKHTTP)
         fun provideOkhttp(
-            @Named(GAME_INTERCEPTOR) gameInterceptor: GameInterceptor
+            @Named(GAME_PAGE_INTERCEPTOR) gameInterceptor: GameInterceptor
         ): OkHttpClient = OkHttpClient()
             .newBuilder()
             .addInterceptor(gameInterceptor)
@@ -53,9 +53,9 @@ abstract class GamePageServiceModule {
 
         companion object {
             private const val BASE_URL = "https://api.rawg.io/api/"
-            private const val GAME_RETROFIT = "GAME_RETROFIT"
-            private const val GAME_OKHTTP = "GAME_OKHTTP"
-            private const val GAME_INTERCEPTOR = "GAME_INTERCEPTOR"
+            private const val GAME_PAGE_RETROFIT = "GAME_PAGE_RETROFIT"
+            private const val GAME_PAGE_OKHTTP = "GAME_PAGE_OKHTTP"
+            private const val GAME_PAGE_INTERCEPTOR = "GAME_PAGE_INTERCEPTOR"
         }
 
 

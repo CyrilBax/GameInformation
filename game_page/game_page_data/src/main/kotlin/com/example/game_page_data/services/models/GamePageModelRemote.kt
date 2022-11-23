@@ -6,7 +6,7 @@ data class GamePageModelRemote(
     val id: String,
     val name: String?,
     val description: String?,
-    val rating: Long?,
+    val rating: Double?,
     @SerializedName("reddit_url")
     val reditLink: String?,
     @SerializedName("reddit_description")

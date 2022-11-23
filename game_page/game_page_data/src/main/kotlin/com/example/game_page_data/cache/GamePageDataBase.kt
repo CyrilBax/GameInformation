@@ -16,7 +16,7 @@ import java.lang.reflect.Type
 @TypeConverters(PlatformEntityConverter::class)
 abstract class GamePageDataBase : RoomDatabase() {
 
-    abstract fun getFamePageDao(): GamePageDAO
+    abstract fun getGamePageDao(): GamePageDAO
 
     companion object {
         const val DATA_BASE_NAME = "GAME_PAGE_DATA_BASE"
