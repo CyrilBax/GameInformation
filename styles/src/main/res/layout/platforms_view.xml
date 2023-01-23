@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:parentTag="androidx.constraintlayout.widget.ConstraintLayout">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/logo_playstation"
+        android:layout_width="@dimen/platform_size"
+        android:layout_height="@dimen/platform_size"
+        android:layout_marginStart="@dimen/margin_small"
+        android:src="@drawable/playstation"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/logo_linux"
+        android:layout_width="@dimen/platform_size"
+        android:layout_height="@dimen/platform_size"
+        android:layout_marginStart="@dimen/margin_small"
+        android:src="@drawable/linux"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/logo_playstation"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/logo_mac"
+        android:layout_width="@dimen/platform_size"
+        android:layout_height="@dimen/platform_size"
+        android:layout_marginStart="@dimen/margin_small"
+        android:src="@drawable/mac"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/logo_linux"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/logo_windows"
+        android:layout_width="@dimen/platform_size"
+        android:layout_height="@dimen/platform_size"
+        android:layout_marginStart="@dimen/margin_small"
+        android:src="@drawable/windows"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/logo_mac"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/logo_android"
+        android:layout_width="@dimen/platform_size"
+        android:layout_height="@dimen/platform_size"
+        android:layout_marginStart="@dimen/margin_small"
+        android:src="@drawable/android"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/logo_windows"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/logo_atari"
+        android:layout_width="@dimen/platform_size"
+        android:layout_height="@dimen/platform_size"
+        android:layout_marginStart="@dimen/margin_small"
+        android:src="@drawable/atari"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/logo_android"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/logo_commodore_amiga"
+        android:layout_width="@dimen/platform_size"
+        android:layout_height="@dimen/platform_size"
+        android:layout_marginStart="@dimen/margin_small"
+        android:src="@drawable/commodore_amiga"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/logo_atari"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/logo_ios"
+        android:layout_width="@dimen/platform_size"
+        android:layout_height="@dimen/platform_size"
+        android:layout_marginStart="@dimen/margin_small"
+        android:src="@drawable/ios"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/logo_commodore_amiga"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/logo_neo_geo"
+        android:layout_width="@dimen/platform_size"
+        android:layout_height="@dimen/platform_size"
+        android:layout_marginStart="@dimen/margin_small"
+        android:src="@drawable/neo_geo"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/logo_ios"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/logo_nintendo"
+        android:layout_width="@dimen/platform_size"
+        android:layout_height="@dimen/platform_size"
+        android:layout_marginStart="@dimen/margin_small"
+        android:src="@drawable/nintendo"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/logo_neo_geo"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/logo_sega"
+        android:layout_width="@dimen/platform_size"
+        android:layout_height="@dimen/platform_size"
+        android:layout_marginStart="@dimen/margin_small"
+        android:src="@drawable/sega"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/logo_nintendo"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/logo_threedo"
+        android:layout_width="@dimen/platform_size"
+        android:layout_height="@dimen/platform_size"
+        android:layout_marginStart="@dimen/margin_small"
+        android:src="@drawable/threedo"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/logo_sega"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/logo_web"
+        android:layout_width="@dimen/platform_size"
+        android:layout_height="@dimen/platform_size"
+        android:layout_marginStart="@dimen/margin_small"
+        android:src="@drawable/web"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/logo_threedo"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/logo_xbox"
+        android:layout_width="@dimen/platform_size"
+        android:layout_height="@dimen/platform_size"
+        android:layout_marginStart="@dimen/margin_small"
+        android:src="@drawable/xbox"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/logo_web"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible" />
+
+</merge>

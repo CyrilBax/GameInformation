@@ -17,6 +17,7 @@ android {
 
 dependencies {
     implementation project(':game_list:game_list_domain')
+    implementation project(':styles')
     implementation project(':business')
 
     // view model

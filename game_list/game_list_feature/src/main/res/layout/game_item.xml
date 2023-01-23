@@ -59,7 +59,7 @@
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <com.example.game_list_feature.ui.main.views.PlatformsView
+        <com.example.styles.views.platformsView.PlatformsView
             android:id="@+id/game_list_platforms_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
