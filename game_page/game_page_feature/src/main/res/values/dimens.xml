@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin_very_small">4dp</dimen>
+
+    <!-- Game Page Shimmer -->
+    <dimen name="game_page_shimmer_picture_height">350dp</dimen>
+    <dimen name="game_page_shimmer_platforms_height">24dp</dimen>
+    <dimen name="game_page_shimmer_platforms_width">200dp</dimen>
+    <dimen name="game_page_shimmer_title_width">300dp</dimen>
+    <dimen name="game_page_shimmer_title_height">24dp</dimen>
+    <dimen name="game_page_shimmer_description_height">200dp</dimen>
+    <dimen name="game_page_shimmer_description_width">350dp</dimen>
+</resources>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.facebook.shimmer.ShimmerFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/gamePageShimmer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+            android:id="@+id/gamePictureShimmer"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/game_page_shimmer_picture_height"
+            android:background="@color/grey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/gamePagePlatformsShimmer"
+            android:layout_width="@dimen/game_page_shimmer_platforms_width"
+            android:layout_height="@dimen/game_page_shimmer_platforms_height"
+            android:layout_marginStart="@dimen/margin_medium"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:background="@color/grey"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/gamePictureShimmer" />
+
+        <View
+            android:id="@+id/gamePageTitleShimmer"
+            android:layout_width="@dimen/game_page_shimmer_title_width"
+            android:layout_height="@dimen/game_page_shimmer_title_height"
+            android:layout_marginStart="@dimen/margin_medium"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:background="@color/grey"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/gamePagePlatformsShimmer" />
+
+        <View
+            android:id="@+id/gamePageDescriptionShimmer"
+            android:layout_width="@dimen/game_page_shimmer_description_width"
+            android:layout_height="@dimen/game_page_shimmer_description_height"
+            android:layout_marginStart="@dimen/margin_medium"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:layout_marginEnd="@dimen/margin_medium"
+            android:background="@color/grey"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/gamePageTitleShimmer" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.facebook.shimmer.ShimmerFrameLayout>

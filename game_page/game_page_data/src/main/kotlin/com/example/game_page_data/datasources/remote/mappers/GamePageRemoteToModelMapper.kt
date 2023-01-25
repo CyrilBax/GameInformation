@@ -16,6 +16,7 @@ class GamePageRemoteToModelMapper @Inject constructor() :
             id = from.id,
             name = from.name,
             description = from.description,
+            pictureUrl = from.backgroundImage,
             rating = from.rating,
             reditLink = from.reditLink,
             reditDescription = from.reditDescription,

@@ -8,6 +8,8 @@ plugins {
 
 apply from: "$project.rootDir/gradle/default_build.gradle"
 apply from: "$project.rootDir/gradle/dependencies_hilt.gradle"
+apply from: "$project.rootDir/gradle/dependencies_picasso.gradle"
+apply from: "$project.rootDir/gradle/dependencies_shimmer.gradle"
 
 android {
     namespace 'com.example.game_page_feature'
@@ -15,9 +17,17 @@ android {
 
 dependencies {
     implementation project(':game_page:game_page_domain')
+    implementation project(':styles')
+    implementation project(':business')
 
     // view model
     implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.5.1'
     implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1'
+
+    // Flexbox -> https://github.com/google/flexbox-layout
+    implementation 'com.google.android.flexbox:flexbox:3.0.0'
+
+    // PhotoView -> https://github.com/Baseflow/PhotoView
+    implementation('com.github.chrisbanes:PhotoView:2.0.0')
 
 }

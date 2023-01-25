@@ -60,6 +60,6 @@ class GameViewHolder @Inject constructor(
     }
 
     private fun showPlatforms(platforms: List<PlatformUi>) {
-            binding.gameListPlatformsView.initPlatformsView(platforms)
+            binding.gameListPlatformsView.initPlatformsView(platforms = platforms, platformsPage = null)
     }
 }

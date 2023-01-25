@@ -4,6 +4,7 @@ data class GamePageModelUi(
     val id: String,
     val name: String?,
     val description: String?,
+    val pictureUrl: String?,
     val rating: Double?,
     val reditLink: String?,
     val reditDescription: String?,

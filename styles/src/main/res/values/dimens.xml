@@ -11,4 +11,5 @@
 
     <!-- Platforms -->
     <dimen name="platform_size">14dp</dimen>
+    <dimen name="platform_size_big">20dp</dimen>
 </resources>
