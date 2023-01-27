@@ -1,4 +1,4 @@
-package com.example.gameinformation
+package com.example.gameinformation.ui
 
 import android.app.Application
 import dagger.hilt.android.HiltAndroidApp
