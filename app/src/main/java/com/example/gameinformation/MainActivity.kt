@@ -1,7 +1,7 @@
 package com.example.gameinformation
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.example.business.contracts.NavigationContract
 import com.example.game_list_feature.ui.main.GameListFragment
 import com.example.game_page_feature.FullscreenFragment

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "605070038068",
+    "project_id": "gameinformation-6b1f7",
+    "storage_bucket": "gameinformation-6b1f7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:605070038068:android:b45eed792e54e0de976661",
+        "android_client_info": {
+          "package_name": "com.example.gameinformation"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "605070038068-i21ckn5f4d1rion2v5fgit9bj1eatt9k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBkHzMN-dasENsA1t5M0kjRH6hdvwaKnmQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "605070038068-i21ckn5f4d1rion2v5fgit9bj1eatt9k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
